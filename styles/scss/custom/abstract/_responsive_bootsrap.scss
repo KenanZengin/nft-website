@@ -1,0 +1,21 @@
+
+$breakpoints:(
+    xz: 0,
+    xx: 400px,
+    xm: 520px,
+    xs: 620px,
+    sm: 820px,
+    md: 1060px,
+    lg: 1240px,
+    xl: 1450px,
+    hd: 1700px,
+    1k: 1940px,
+    2k: 2580px
+);
+
+
+@mixin BootstrapMaxWidthResponsive($point) {
+    @media (max-width: (map-get($breakpoints, $point) - 1)) {
+           @content
+    }
+}

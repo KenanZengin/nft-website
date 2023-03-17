@@ -1,0 +1,126 @@
+.web-content{
+    flex: 1 0 0;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    .content{
+        &-ctgrs{
+            display: flex;
+            padding: 10px 15px;
+            background-color: white;
+            border-radius: 10px; 
+            .categories{ 
+                flex: 1;
+                display: flex;
+                gap: 0 12px;
+                border-right: 1px solid $site-clr-8 ;
+                padding-right: 10px;
+            }
+            .category{
+                display: flex;
+                align-items: center;
+                background-color: #EDEDED;
+                border-radius: 15px;
+                padding: 0 5px;
+                span{
+                    padding: 0 30px;
+                }
+            }
+            .more{
+                flex: auto;
+                display: flex;
+                justify-content: center;
+                span{
+                    padding: 0 10px !important;
+                }
+            }
+        }
+        &-cards{
+            padding: 40px 0;
+            .row{
+                justify-content: space-between;
+                .col{
+                    max-width: 280px;
+                    padding:10px 0;
+                    @include BootstrapMaxWidthResponsive(hd){ 
+                        width: 250px;
+                    }
+                    .card{
+                        border: none;
+                        background-color: white;
+                        &-header{
+                            display: flex;
+                            justify-content: center;
+                            border-bottom: none;
+                            img{
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        &-body{
+                            .title{
+                                display: flex;
+                                justify-content: space-between;
+                                &-info{
+                                    display: flex;
+                                    gap: 0 7px;
+                                    .card-title{
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                    }
+                                    span{
+                                        display: flex;
+                                        align-items: flex-end;
+                                        background-color: $site-clr-9;
+                                        font-size: 13px;
+                                        color: white;
+                                        border-radius: 3px;
+                                        padding: 2px;
+                                    }
+                                }
+                                &-img{
+                                    display: flex;
+                                    gap: 0 10px;
+                                    align-items: center;
+                                }
+                            }
+                            .info{
+                                display: flex;
+                                justify-content: space-between; 
+                                padding: 10px 0;
+                                color: $site-clr-5;
+                                
+                            }
+                            .prc{
+                                display: flex;
+                                justify-content: space-between;
+                                color: $site-clr-5;
+                                .value{
+                                    padding-top: 10px;
+                                    color: $site-clr-6 ;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        &-trnstn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: white;
+            padding: 10px 0;
+            border-radius: 10px;
+            color: $site-clr-5 ;
+            span{
+                padding: 10px 15px;
+                background-color:$site-clr-2;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}

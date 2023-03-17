@@ -1,0 +1,162 @@
+.web-sidebar{
+    flex: 0 0 auto;
+    width: 400px;  
+    .sidebar{
+        &-ptns{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 1px solid $site-clr-3   ;
+            font-weight: bold;
+            .left{
+                display: flex;
+                align-items: center;
+                gap: 0 5px;
+            }
+        }
+        &-prc{
+            padding: 30px 0;
+            font-weight: bold;
+            border-bottom: 1px solid $site-clr-3   ;
+            .prc-typ{
+                background-color:$site-clr-3;
+                border-radius: 15px;
+                padding: 6px;
+                .btn-group{
+                    width: 100%;
+                    max-width: 100%;
+                    input,label{
+                        border:none;
+                        border-radius: 13px;
+                        padding-top: 10px;
+                        padding-bottom: 0;
+                        color: $site-clr-6; 
+                        font-weight: bold;
+                        &:focus{
+                            box-shadow: none;  
+                        }
+                    }
+                }
+            }
+            .info{
+                padding-top:28px;
+                .symbl{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 18px;
+                    font-weight: bold;
+                    span{
+                        display: flex;
+                        align-items: center;
+                        gap: 0 10px;
+                    }
+                }
+                form{
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 0 10px;
+                    padding-top: 15px;
+                    input{
+                        font-weight: bold;
+                        text-align: center;
+                        padding-top: 15px;
+                        padding-bottom: 0;
+                        &::placeholder{
+                            color: $site-clr-3;
+                            font-size: 16px;
+                        }
+                        &:focus{
+                            box-shadow: none;
+                            border-color: $site-clr-6;
+                        }
+                    }
+                    input:first-child{
+                        border-radius: 15px 0 0 15px;
+                    }
+                    input:last-child{
+                        border-radius: 0 15px 15px 0;
+                    }
+                    span{
+                        color:$site-clr-5;
+                        font-weight: normal;
+                    }
+                }
+                .sell{
+                    padding-top:15px;
+                    button{
+                        width: 100%;
+                        max-width: 100%;
+                        text-align: center;
+                        padding: 10px 0;
+                        background-color:$site-clr-7;
+                        border: none;
+                        border-radius: 15px;
+                        color: white;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        &-optns{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0;
+            font-weight: bold;
+            border-bottom: 1px solid $site-clr-3;
+            form{
+                .form-switch{
+                    padding-bottom: 20px;
+                    input{
+                        background-color: $site-clr-3;
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+                        &:focus{
+                            box-shadow: none;  
+                            border-color: inherit;
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+                        }
+                    }
+                }
+            }
+        }
+        &-fvrts{
+            .top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 25px 0;
+                font-size: 18px;
+                border-bottom: 1px solid $site-clr-3;
+                font-weight: bold;
+                span{
+                    padding-left: 15px;
+                }
+            }
+        }
+        &-cllctns{
+            .top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 25px 0;
+                font-size: 18px;
+                font-weight: bold;
+                span{
+                    padding-left: 15px;
+                }
+            }
+            .fvrt-items{
+                
+                .item{
+                    padding-bottom: 10px;
+                    span{
+                        padding-left: 10px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
