@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ToggleButton , ButtonGroup , Form , Collapse   } from 'react-bootstrap';
 import { useState } from 'react';
 
-import icon from 'public/assets/img/icon.svg'
+import options from 'public/assets/img/icon.svg'
 import leftarrow from 'public/assets/img/leftarrow.svg'
 import uparrow from 'public/assets/img/uparrow.svg'
 import botharrow from 'public/assets/img/botharrow.svg'
@@ -18,9 +18,10 @@ const Sidebar = () => {
   
   return (
     <> 
+
       <div className="sidebar-ptns">
         <div className="left">
-          <Image src={icon} alt="options" />
+          <Image src={options} alt="options" />
           <h2 className='h4'>Options</h2>
         </div>
         <div className="right">
@@ -112,6 +113,7 @@ const Sidebar = () => {
         </Collapse>
 
       </div>
+      
     </>
   )
 }

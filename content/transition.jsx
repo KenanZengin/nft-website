@@ -1,8 +1,6 @@
-
 import Image from 'next/image'
 
 import leftarrow from 'public/assets/img/leftarrow.svg'
-
 import rightarrow from 'public/assets/img/rightarrow.png'
 
 const Transition = () => {

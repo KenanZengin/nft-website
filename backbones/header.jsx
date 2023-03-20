@@ -2,9 +2,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Container , Navbar , Nav ,Form, Dropdown } from "react-bootstrap"
+
 import logo from 'public/assets/img/logo.png'
 import user from 'public/assets/img/user.png'
-import seacrh from 'public/assets/img/search.svg'
+import search from 'public/assets/img/search.svg'
+
 const Header = () => {
 
     const headNavMenu = [
@@ -55,7 +57,7 @@ const Header = () => {
                             <Form>
                             <Form.Control type="text" placeholder="Search by creator, collectible or collection" />
                             </Form>
-                            <Image src={seacrh} alt="search" />
+                            <Image src={search} alt="search" />
                         </div>
                     </div>
                 </div>

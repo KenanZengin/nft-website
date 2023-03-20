@@ -1,4 +1,3 @@
-
 import '../styles/glabol.scss'
 import Footer from '@/backbones/footer'
 import Header from '@/backbones/header'

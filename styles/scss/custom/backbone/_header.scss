@@ -5,6 +5,9 @@
     &-web{
         display: flex;
         align-items: center;
+        @include BootstrapMaxWidthResponsive(sm){ 
+           justify-content: space-between;
+        }
         &-left{
             flex: 0 0 auto;
             width: 400px;            
@@ -16,6 +19,9 @@
             flex : 1 0 0 ;
             width: 100%;
             max-width: 100%;
+            @include BootstrapMaxWidthResponsive(sm){ 
+                display: none;
+            }
             .headerGroup{
                 display: flex;
                 justify-content: space-between;
@@ -34,6 +40,9 @@
                     display: flex;
                     align-items: center;
                     position: relative;
+                    @include BootstrapMaxWidthResponsive(md){
+                        display: none;
+                    }
                     form{
                         position: relative;
                         input{
@@ -72,6 +81,9 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            @include BootstrapMaxWidthResponsive(xs){ 
+                width: auto;
+            }
             .userinfo,.lang{
                 button{
                     background-color: inherit;
@@ -94,6 +106,9 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
+                        @include BootstrapMaxWidthResponsive(xs){ 
+                            display: none;
+                        }
                     }
                 }
             }

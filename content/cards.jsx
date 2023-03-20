@@ -1,7 +1,5 @@
-
 import { imgData } from "../dataset/imgdata"
 import { Row , Col , Card } from "react-bootstrap"
-
 
 import fvrt from 'public/assets/img/favori.svg'
 import like from 'public/assets/img/like.svg'
@@ -21,8 +19,7 @@ const Cards = () => {
 
   return (
    <>
-        <Row xxl={5} xl={4} lg={3}  xs={1}>
-
+        <Row xxl={5}>
                 {imgData.map((img,i)=>(
                     <Col key={i}>
                         <Card>  
@@ -52,13 +49,7 @@ const Cards = () => {
                         </Card>
                     </Col>
                 ))}
-            
-
-            
         </Row>
-
-
-
 
     </>
   )

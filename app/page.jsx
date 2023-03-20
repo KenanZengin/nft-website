@@ -1,5 +1,4 @@
 'use client'
-
 import Content from "@/content/content";
 import Sidebar from "@/content/sidebar";
 import { Container } from "react-bootstrap";

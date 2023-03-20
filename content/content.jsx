@@ -1,17 +1,11 @@
-
-
-import Cards from "./cards";
 import Categories from "./categories";
+import Cards from "./cards";
 import Transition from "./transition";
 
 
 
 
 const Content = () => {
-
-
-
-  
 
   return (
     <>

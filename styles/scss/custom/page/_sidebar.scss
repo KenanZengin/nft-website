@@ -1,6 +1,7 @@
-.web-sidebar{
+.web-sidebar,.canvas{
     flex: 0 0 auto;
     width: 400px;  
+    
     .sidebar{
         &-ptns{
             display: flex;
@@ -160,3 +161,44 @@
         }
     }
 }
+
+@include BootstrapMaxWidthResponsive(lg){ 
+    .web-sidebar{
+         display: none;
+    }
+}
+
+
+.offcanvas-backdrop.show{
+    background-color: $site-clr-7 ;
+    opacity: 1 !important;
+}
+
+.offcanvas{
+    width:  500px !important; 
+    background-color: $site-clr-2 !important;
+    @include BootstrapMaxWidthResponsive(xm){ 
+        width: 420px !important;
+    }
+    .offcanvas-header,.offcanvas-body{
+        padding: 0 6px;
+    }
+    .offcanvas-body{    
+        .main{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            .canvas{
+                .right{
+                    img{
+                        display: none;
+                    }
+                }
+                .sidebar-cllctns{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+

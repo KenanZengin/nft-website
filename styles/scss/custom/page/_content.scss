@@ -6,45 +6,278 @@
     .content{
         &-ctgrs{
             display: flex;
-            padding: 10px 15px;
+            padding: 15px;
             background-color: white;
-            border-radius: 10px; 
-            .categories{ 
-                flex: 1;
+            border-radius: 10px;
+            .categories-populer{
                 display: flex;
-                gap: 0 12px;
-                border-right: 1px solid $site-clr-8 ;
-                padding-right: 10px;
-            }
-            .category{
-                display: flex;
-                align-items: center;
-                background-color: #EDEDED;
-                border-radius: 15px;
-                padding: 0 5px;
-                span{
-                    padding: 0 30px;
+                flex-wrap: wrap;
+                width: 100%;
+                @include BootstrapMaxWidthResponsive(md){
+                    flex-direction: column;
                 }
-            }
-            .more{
-                flex: auto;
-                display: flex;
-                justify-content: center;
-                span{
-                    padding: 0 10px !important;
+                .categories,.more,.dropMenu{  
+                        padding-left: 0 !important;          
+                        .category{
+                            flex-basis: 0;
+                            flex-grow: 1;
+                            padding: 0 5px;
+                            @include BootstrapMaxWidthResponsive(hd){ 
+                                &:nth-child(5){
+                                    display: none;
+                                }
+                             }
+                            @include BootstrapMaxWidthResponsive(xl){ 
+                                &:nth-child(4){
+                                    display: none;
+                                }
+                            }
+                            @include BootstrapMaxWidthResponsive(md){ 
+                                    display: none;
+
+                            }
+
+                            a{
+                                
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                position: relative;
+                                background-color: $site-clr-2;
+                                padding: 10px 0;
+                                color: $site-clr-6 ;
+                                border-radius: 20px;
+                                font-size: 14px;
+                                img{
+                                    position: absolute;
+                                    left: 8px;
+                                }
+                            } 
+                        }
                 }
+                .categories,.dropMenu{ 
+                    flex: 1 0 0;
+                    display: flex;
+                    width: 100%;
+                    padding-right: 10px;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    .options{
+                        display: none;
+                        @include BootstrapMaxWidthResponsive(lg){                           
+                            display: flex;
+                            a{
+                                flex: 1 0 auto;
+                            }
+                        }
+                        @include BootstrapMaxWidthResponsive(md){                           
+                            display: none;
+                        }
+                    }
+
+                    
+                }
+                .more{
+                    flex: 0 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    a{
+                        .dropdown{
+                            
+                            .dropdown-toggle{
+                                background-color: inherit;
+                                border: 0;
+                                padding: 0;
+                                &::after{
+                                display: none;
+                                }
+                            }
+                            &-menu{
+                                a{
+                                    
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-align: center;
+                                    position: relative;
+                                    background-color: inherit;
+                                    padding: 1  0px 80px;
+                                    color: $site-clr-6 ;
+                                    font-size: 16px;
+                                    img{
+                                        position: absolute;
+                                        left: 12px;
+                                    }
+                                }
+                            }
+                        }
+                        span{
+                            padding: 0 10px !important;
+                            color: $site-clr-6 ;
+                            ::after{
+                                display: none !important;
+                            }
+                        }
+                    }
+                    @include BootstrapMaxWidthResponsive(md){ 
+                        display: none;
+                    }
+
+                }
+                .dropMenu{
+                    display: none !important;
+                    @include BootstrapMaxWidthResponsive(md){ 
+                        display: flex !important;
+                        flex: 1 0 0 ;
+                        width: 100%;
+                        padding-right: 0;
+                        .dropdown{
+                            flex: 1 0 0;
+                            width: 100%;
+                            button{
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: white;
+                                color: $site-clr-6 ;
+                                border-color: $site-clr-3  ;
+                                transition: all .3s;
+                                padding: 10px;
+                                border-radius: 20px;
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    background-image: url(#{$path-assets-url}/img/all.svg#{$cache-busting});
+                                    left: 10px;
+                                    top: 0px;
+                                    bottom: 0px;
+                                    width: 30px;
+                                    background-repeat: no-repeat;
+                                    background-position-y: 50%;
+                                    background-position-x: 0;
+                                }
+                                &:hover{
+                                    background-color: $site-clr-3  ;
+                                }
+                            }
+                                .dropdown-menu{
+                                    width: 100%;
+                                    .dropdown-item{
+                                        &:hover{
+                                            background-color: transparent;
+                                        }
+                                        .category{
+                                            display: flex !important;
+                                            a{
+                                                width: 100%;
+                                                &:hover{
+                                                    color: white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                    }
+                }
+                .categories{
+                    @include BootstrapMaxWidthResponsive(md){
+                        display: none;
+                    }
+                }
+                .filtersarea{
+                    display: none;
+                    @include BootstrapMaxWidthResponsive(md){
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        padding-bottom: 20px;
+                    }
+                    .category{
+                        flex: 0 0 auto;
+                        width: auto;
+                        background-color: $site-clr-2 ;
+                        border-radius: 20px;
+                        button{
+                            border: 0;
+                            border-radius: 10px;
+                            a{
+                                color: $site-clr-6;
+                                display: flex;
+                                padding: 7px 40px;
+                                align-items: center;
+                                img{
+                                    position: absolute;
+                                    left: 10px;
+                                }
+                            }
+                        }
+                    }         
+                    .filtersearch{
+                        flex: 1 0 0%;
+                        width: 100%;
+                        padding-left: 15px;
+                        position: relative;
+                        form{
+                            input{
+                                width: 100%;
+                                background-color: $site-clr-2;
+                                border-radius: 20px;
+                                padding: 7px 15px;
+                                font-weight: bold;
+                                @include BootstrapMaxWidthResponsive(xs){
+                                    padding-right: 50px;
+                                }
+                                &::placeholder{
+                                    color: $site-clr-3;
+                                    font-size: 16px;
+                                }
+                                &:focus{
+                                    box-shadow: none;
+                                    border-color: $site-clr-6;
+                                }
+    
+                            }
+                        }
+                        img{
+                            position: absolute;
+                            top: 11px;
+                            right: 24px;
+                        
+                        }
+                    }
+
+                    
+                }
+               
             }
+
         }
         &-cards{
             padding: 40px 0;
             .row{
                 justify-content: space-between;
                 .col{
-                    max-width: 280px;
-                    padding:10px 0;
-                    @include BootstrapMaxWidthResponsive(hd){ 
-                        width: 250px;
+
+                    @include BootstrapMaxWidthResponsive(hd){
+                        flex: 0 0 25%;
                     }
+                    @include BootstrapMaxWidthResponsive(xl){
+                        flex:0 0 33.33333%;
+                    }
+                    @include BootstrapMaxWidthResponsive(md){
+                        flex:0 0 50%;
+                    }
+                    @include BootstrapMaxWidthResponsive(sm){
+                        flex:0 0 95%;
+                        justify-content: center;
+                    }
+
+                    padding:10px 10px;
+                    
                     .card{
                         border: none;
                         background-color: white;

@@ -3,10 +3,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Container , Form } from "react-bootstrap"
 import {BsFacebook,BsTwitter,BsInstagram,BsTelegram,BsYoutube} from "react-icons/bs"
-import circle from 'public/assets/img/circle.png'
 
+import circle from 'public/assets/img/circle.png'
+ 
 
 const Footer = () => {
+
   return (
     <div className="footer">
         <Container fluid>
@@ -44,8 +46,6 @@ const Footer = () => {
                         <BsYoutube />
                         <BsTelegram />
                     </div>
-
-
                 </div>
             </div>
         </Container>
